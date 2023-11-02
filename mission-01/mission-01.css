@@ -1,0 +1,37 @@
+:root {
+  --top-group-width: 502px;
+  --top-group-height: 310px;
+}
+
+body {
+  margin: 0;
+}
+
+.content-container {
+  background: rgb(78, 177, 58);
+  width: var(--top-group-width);
+  position: relative;
+}
+
+.top-group {
+  background: red;
+  width: var(--top-group-width);
+  height: var(--top-group-height);
+}
+
+.bottom {
+  position: absolute;
+  background: gray;
+  width: 243px;
+  height: 310px;
+  top: var(--top-group-height);
+  margin-top: 15px;
+}
+
+.left-group {
+  left: 0;
+}
+
+.right-group {
+  right: 0;
+}
