@@ -57,14 +57,12 @@ body {
   float: left;
 }
 
-.pic-container:first-child {
-  margin-left: 30px;
-  margin-top: 80px;
+.ottugi {
+  margin: 80px 15px auto 15px;
 }
 
-.pic-container:nth-child(2) {
-  margin-right: 20px;
-  margin-top: 20px;
+.honey-tea {
+  margin: 20px 10px auto 10px;
 }
 
 .description {
@@ -100,15 +98,4 @@ body {
 
 .right-group {
   right: 0;
-}
-
-.button1 {
-  width: 42px;
-  height: 42px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none;
-  position: absolute;
-  top: 248px;
-  bottom: 20px;
-  margin: 0 20px;
 }
