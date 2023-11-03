@@ -17,7 +17,8 @@ HTML문서의 구조를 설계하는 과정에서 항상 flex를 사용했던 �
 4. 세로 배치는 top의 너비와 높이를 변수로 지정해서 bottom요소들에게 `top: var(--top-group-height);` 부여 함으로서 top-group 바로 밑에 배치됨
 5. bottom-left에게 `left: 0;`으로 왼쪽에 붙여주고 bottom-right에게`right: 0;`으로 오른쪽으로 붙여줌.
 세부적인 속성들은 재외하고 설명한대로 속성들을 부여하면 아래와 같은 결과가 나옵니다.
-<br>![image](https://github.com/dldnlee/home-work/assets/83799987/521cb54d-726d-4a0c-82c5-dd3dc139ae13)
+<br>![image](https://github.com/dldnlee/home-work/assets/83799987/eec990db-e3b3-4ec7-a11b-bd82c099cf74)
+
 
 
 ## 1-1 top-group블록 구조
