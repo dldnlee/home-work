@@ -17,7 +17,7 @@ HTML문서의 구조를 설계하는 과정에서 항상 flex를 사용했던 �
 4. 세로 배치는 top의 너비와 높이를 변수로 지정해서 bottom요소들에게 `top: var(--top-group-height);` 부여 함으로서 top-group 바로 밑에 배치됨
 5. bottom-left에게 `left: 0;`으로 왼쪽에 붙여주고 bottom-right에게`right: 0;`으로 오른쪽으로 붙여줌.
 세부적인 속성들은 재외하고 설명한대로 속성들을 부여하면 아래와 같은 결과가 나옵니다.
-<br>![image](https://github.com/dldnlee/home-work/assets/83799987/915793a2-61ef-4562-9d2f-344655d0940f)
+<br>![image](https://github.com/dldnlee/home-work/assets/83799987/521cb54d-726d-4a0c-82c5-dd3dc139ae13)
 
 
 ## 1-1 top-group블록 구조
@@ -62,7 +62,8 @@ bottom블록의 내부 구조는 `text-align: center` 속성으로 중앙 정렬
 
 ## 2-1. 버튼 hover 요소
 해당 버튼은 마우스를 올렸을 때 너비, 배경색, 그리고 "구매하기"라는 텍스트가 추가되는 것을 볼 수 있습니다. 
-<br>![image](https://github.com/dldnlee/home-work/assets/83799987/41d8df72-dc96-4d88-9640-ee168feea2b1)
+<br>![image](https://github.com/dldnlee/home-work/assets/83799987/17cb7db6-1801-4ab3-ba64-5b4199325378)
+
 
 
 해당 조건들을 만족하기 위해 버튼에 `:hover` 와 `:hover:before` 유사클래스를 사용했습니다.
@@ -77,7 +78,7 @@ bottom블록의 내부 구조는 `text-align: center` 속성으로 중앙 정렬
 
 `:hover:before` 는 버튼 스타일이 바뀌면서 "구매하기"라는 텍스트가 화살표 아이콘 전에 생길 수 있도록 `:before` 유사 클래스로 선택한뒤 `content: '구매하기';`로 텍스트 추가할 수 있었습니다.
 ```
-.purchase-button:hover:before {
+.purchase-button:hover::before {
   content: '구매하기';
   font-size: 14px;
   font-weight: 500;
@@ -91,7 +92,8 @@ Screen Reader를 사용했을 때 가장 먼저 읽어주어야 하는 부분은
 그렇기에 읽어주는 순서는 `타이틀 -> 구매하기 버튼 -> 타이틀 2 -> 구매하기 버튼 2 -> 타이틀3 -> 구매하기 버튼 3`으로 변경했습니다. 
 
 # 4. 결과 / 느낀점
-![image](https://github.com/dldnlee/home-work/assets/83799987/310ab77c-6f8e-48fb-bb53-905e02361ef7)
+![image](https://github.com/dldnlee/home-work/assets/83799987/e6018025-bde1-414a-9d56-d7cba3cfd175)
+
 
 독학으로 html과 css를 배웠을 당시 배치하고 싶은 블록들을 `div`로 묶어서 `display: flex`만 사용했던 저에게는 신선히고 새로웠던 부분이었습니다. 한편으로는 flex로 빨리 끝내고 싶다는 마음도 있었지만 색다른 방법으로 해보니 뿌듯하고 확실
 css에 대한 이해도가 높아진다는 생각이 들었습니다. 물론 편하고 대중적인 방법이 쉽고 빠르겠지만, 앞으로도 새로운 방법과 색다른 방식으로 문제에 접근해보고 싶다는 욕심이 생겼습니다. 
