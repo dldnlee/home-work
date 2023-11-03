@@ -10,7 +10,7 @@ body {
 .content-container {
   width: var(--top-group-width);
   position: relative;
-  margin: 10% auto;
+  margin: 100px auto;
 }
 
 .top-group, .bottom {
@@ -29,8 +29,27 @@ body {
   position: absolute;
   bottom: 20px;
   left: 20px;
+  height: 42px;
+  width: 42px;
+  border: none;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.20);
+  color: white;
+  text-align: center;
 }
 
+.purchase-button:hover {
+  background: #0074E9;
+  cursor: pointer;
+  width: 112px;
+}
+
+.purchase-button:hover:before {
+  content: '구매하기';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
 
 .pic-container {
   text-align: center;
@@ -41,7 +60,6 @@ body {
 .pic-container:first-child {
   margin-left: 30px;
   margin-top: 80px;
-  
 }
 
 .pic-container:nth-child(2) {
@@ -58,21 +76,15 @@ body {
   line-height: 150%; /* 36px */
 }
 
-
-
-
-
-
+/* 아래 아이템 집합 */
 .bottom {
   position: absolute;
-
   width: 243px;
   height: 310px;
   top: var(--top-group-height);
   margin-top: 15px;
   text-align: center;
-  padding-top: 10px;
-  
+  padding-top: 15px;
 }
 
 .bottom h2 {
@@ -88,4 +100,15 @@ body {
 
 .right-group {
   right: 0;
+}
+
+.button1 {
+  width: 42px;
+  height: 42px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  position: absolute;
+  top: 248px;
+  bottom: 20px;
+  margin: 0 20px;
 }

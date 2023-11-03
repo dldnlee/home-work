@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +8,45 @@
 </head>
 <body>
 
-  <main class="content-container">
+  <main class="content-container" >
 
     <!-- 위에 있는 아이템 -->
     <div class="top-group">
       <div class="pic-container ottugi">
-        <img src="images/ottugi.png" alt="ottugi">
-        <h1 class="description">따뜻한 차 향기</h1>
+        <img src="images/ottugi.png" alt="ottugi" aria-hidden="true">
+        <h1 class="description" tabindex="0">따뜻한 차 향기</h1>
       </div>
       <div class="pic-container honey-tea">
         <img src="images/honey-tea.png" alt="honey-tea">
       </div>
-      <button class="purchase-button">chek</button>
+      <button class="purchase-button" aria-label="구매하기">
+        <img src="images/angle-right.png" alt="">
+      </button>
     </div>
-
+     
     <!-- 좌하단 아이템 -->
     <div class="bottom left-group">
-      <img src="images/kamil.png" alt="">
-      <h2 class="description">따뜻한 큐티</h2>
+      <img src="images/kamil.png" alt="kamil" aria-hidden="true">
+      <h2 class="description" tabindex="0">핸드크림 모음</h2>
       <img src="images/handcream.png" alt="">
-      <button class="purchase-button">chek</button>
+      <button class="purchase-button" aria-label="구매하기">
+        <img src="images/angle-right.png" alt="">
+      </button>
     </div>
 
     <!-- 우하단 아이템 -->
     <div class="bottom right-group">
       
       <img src="images/gomgom.png" alt="gomgom">
-      <h2 class="description">따뜻한 큐티</h2>
+      <h2 class="description" tabindex="0">고소한 보리차</h2>
       <img src="images/barley-tea.png" alt="barley-tea">
-      <button class="purchase-button">chek</button>
+      <button class="purchase-button" aria-label="구매하기">
+        <img src="images/angle-right.png" alt="">
+      </button>
     </div>
   </main>
+
+
 
 </body>
 </html>
