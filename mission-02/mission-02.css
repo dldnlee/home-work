@@ -96,8 +96,16 @@ nav {
 
 
   & .email {
-    /* position: relative; */
-    /* background: aqua; */
+    position: relative;
+
+    & .email-error {
+      /* display: none; */
+      position: absolute;
+      right: 0px;
+      bottom: 0;
+      /* background: black; */
+      padding: 8px;
+    }
   }
 
   & .password {

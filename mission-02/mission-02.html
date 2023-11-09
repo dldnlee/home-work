@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>에디야 커피 - 로그인</title>
   <link rel="stylesheet" href="mission-02.css">
+  <script src="mission-02.js" defer></script>
 </head>
 <body>
   <nav>
@@ -21,11 +22,16 @@
       <form action="/" class="login-form">
         <div class="email">
           <label for="login-email" class="input-label">이메일</label>
-          <input type="email" id="login-email" class="email-input">
+          <input type="email" id="login-email" class="email-input input-field" required>
+          <span class="email-error" id="email-error">
+            <img src="images/valid-icon.svg" alt="">
+          </span>
+          <img src="" alt="" hidden>
         </div>
         <div class="password">
           <label for="login-password" class="input-label">비밀번호</label>
-          <input type="password" id="login-password" class="pw-input">
+          <input type="password" id="login-password" class="pw-input input-field">
+          <span class="error-message"></span>
         </div>
         <div class="save-email-container">
           <input type="checkbox" value="이메리 저장" id="save-email">
@@ -39,5 +45,6 @@
       </form>
     </div>
   </div>
+
 </body>
 </html>
