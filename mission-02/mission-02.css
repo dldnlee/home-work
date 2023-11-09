@@ -1,0 +1,170 @@
+.reset-margins {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  }
+
+/*-------------------*/
+
+@keyframes input-animation {
+
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------------*/ 
+
+body {
+  margin: 0;
+  /* background: url("./images/coffe-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: brown;
+  height: 100vh; */
+}
+/* 
+nav {
+  height: 100px;
+  width: 100%;
+  background: white;
+} */
+
+.login-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background: url("./images/coffe-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: brown;
+  height: 100vh;
+}
+
+.login-text {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: white;
+
+  & h1 {
+    font-weight: 300;
+    font-size: 3.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  & h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+
+  & h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+.login-form-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 100px;
+  color: white;
+
+  & input {
+    width: 540px;
+    height: 48px;
+    background: none;
+    border: none;
+    border-bottom: .1rem solid rgb(255, 255, 255, .3);
+    color: white;
+    font-size: 2rem;
+    padding-bottom: none;
+  }
+
+
+  & .email {
+    /* position: relative; */
+    /* background: aqua; */
+  }
+
+  & .password {
+    /* position: relative; */
+    margin-top: 30px;
+  }
+
+  /* & .input-label {
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: 300;
+    bottom: 25%;
+    left: 1%;
+  } */
+
+  & input:focus {
+    border-bottom: .1rem solid rgb(255, 255, 255);
+    border: 1px solid blue;
+    outline: none;
+  }
+
+  & label, input {
+    display: block;
+  }
+
+  & .save-email-container {
+    display: flex;
+    align-items: center;
+
+    & input {
+      width: 16px;
+      /* background-color: black; */
+    }
+  }
+
+
+
+
+  & .login-form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+
+    & button {
+      background: none;
+      height: 48px;
+      width: 260px;
+      border: 1px solid white;
+      border-radius: 10px;
+      color: white;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 29.6px;
+    }
+
+    & button:hover {
+      background: #24388D;
+      color: white;
+      border: none;
+    }
+
+    & .login-button {
+      background: white;
+      color: #24388D;
+      border: none;
+    }
+  }
+
+
+}
