@@ -24,31 +24,13 @@ html {
 }
 
 
-
-
-
-
-
-
-
-
 /*-------------------*/ 
+
+
 
 body {
   margin: 0;
-  /* background: url("./images/coffe-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: brown;
-  height: 100vh; */
 }
-/* 
-nav {
-  height: 100px;
-  width: 100%;
-  background: white;
-} */
 
 .login-container {
   display: flex;
@@ -178,7 +160,6 @@ nav {
     & button {
       background: none;
       height: 48px;
-      width: 260px;
       border: 1px solid white;
       border-radius: 10px;
       color: white;
@@ -201,4 +182,46 @@ nav {
   }
 
 
+}
+
+
+
+@media(min-width: 600px) {
+  .login-form-buttons button {
+    width: 260px;
+  }
+}
+
+@media(max-width: 600px) {
+
+  .login-container {
+    /* background: white; */
+    width: 100%;
+  }
+
+  .login-form-container {
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+
+  .login-form-container input {
+    width: 100%;
+    padding: 0;
+  }
+
+  .login-form-buttons {
+    flex-flow: column;
+    row-gap: 10px;
+
+    & button {
+      height: 2400px;
+      width:100%;
+    }
+  }
+
+  
 }

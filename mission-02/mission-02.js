@@ -40,7 +40,7 @@ const pwIcon = document.querySelector('.pw-validator-mark');
 const pwLabel = document.querySelector('.input-label-password')
 const pwVisible = document.querySelector('.pw-visibility');
 const pwEye = document.querySelector('.eye');
-let toggle = 1;
+let toggle = false;
 
 function password() {
   pwField.addEventListener('keyup', function(e) {
@@ -80,13 +80,13 @@ function password() {
     const type = pwField.getAttribute('type') === "password" ? "text" : "password";
     pwField.setAttribute("type", type);
     
-    if(toggle === 1) {
+    if(toggle === false) {
       pwEye.src = "./images/hide-pw.svg";
-      toggle += 1;
+      toggle = !toggle;
       
-    } else if (toggle === 2) {
+    } else if (toggle === true) {
       pwEye.src = "./images/show-pw.svg";
-      toggle -= 1;
+      toggle = !toggle;
     }
   })
 }
