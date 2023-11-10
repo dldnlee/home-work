@@ -11,7 +11,7 @@ html {
 }
 
 .--is-active {
-  animation: input-filled 1s forwards;
+  animation: input-filled .5s forwards;
 }
 
 /*-------------------*/
@@ -135,16 +135,6 @@ nav {
         height: 16px;
         width: 16px;
         
-      }
-
-      & .eye {
-        background: url('./images/show-pw.svg');
-      }
-
-      & .eye-slash {
-        background: url('./images/hide-pw.svg');
-        background-repeat: no-repeat;
-        background-position: center;
       }
     }
   } 

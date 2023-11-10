@@ -40,16 +40,23 @@ const pwIcon = document.querySelector('.pw-validator-mark');
 const pwLabel = document.querySelector('.input-label-password')
 const pwVisible = document.querySelector('.pw-visibility');
 const pwEye = document.querySelector('.eye');
+let toggle = 1;
 
 function password() {
   pwField.addEventListener('keyup', function(e) {
     if(pwField.checkValidity() === true && pwField.value !== "") {
       pwIcon.classList.remove('hidden');
       pwIcon.src = "./images/valid-icon.svg";
-      pwVisible.classList.remove('hidden');
-    } else if(pwField.value === "") {
+      pwEye.classList.remove('hidden');
+    } else if(pwField.checkValidity() !== true && pwField.value !== "") {
+      pwIcon.classList.remove('hidden');
+      pwEye.classList.remove('hidden');
+    } 
+    else if(pwField.value === "") {
       pwIcon.classList.add('hidden');
-    } else {
+      pwEye.classList.add('hidden');
+    } 
+    else {
       pwIcon.classList.remove('hidden');
       pwIcon.src = "./images/invalid-icon.svg";
     }
@@ -58,7 +65,7 @@ function password() {
   pwField.addEventListener('blur', function(e) {
     if(pwField.value === "") {
       pwIcon.classList.add('hidden');
-      pwVisible.classList.add('hidden');
+      pwEye.classList.add('hidden');
       pwLabel.classList.remove('--is-active');
     } else {
       pwIcon.classList.remove('hidden');
@@ -72,8 +79,15 @@ function password() {
   pwVisible.addEventListener('click', function(e) {
     const type = pwField.getAttribute('type') === "password" ? "text" : "password";
     pwField.setAttribute("type", type);
-
-    pwEye.classList.toggle("eye");
+    
+    if(toggle === 1) {
+      pwEye.src = "./images/hide-pw.svg";
+      toggle += 1;
+      
+    } else if (toggle === 2) {
+      pwEye.src = "./images/show-pw.svg";
+      toggle -= 1;
+    }
   })
 }
 
