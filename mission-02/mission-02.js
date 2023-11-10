@@ -1,6 +1,7 @@
 const emailField = document.getElementById("login-email");
 const emailIcon = document.querySelector('.email-validator-mark');
 const emailLabel = document.querySelector('.input-label-email')
+const emailMessage = document.querySelector('.email-error-message');
 
 
 function email() {
@@ -8,12 +9,15 @@ function email() {
     if(emailField.checkValidity() === true) {
       emailIcon.classList.remove('hidden');
       emailIcon.src = "./images/valid-icon.svg";
+      emailMessage.classList.add('hidden')
     } else if (emailField.value === "") {
       emailIcon.classList.add('hidden');
+      emailMessage.classList.add('hidden')
     } 
     else {
       emailIcon.classList.remove('hidden');
       emailIcon.src = "./images/invalid-icon.svg";
+      emailMessage.classList.remove('hidden');
     }
   })
   
@@ -39,6 +43,7 @@ const pwField = document.getElementById("login-password");
 const pwIcon = document.querySelector('.pw-validator-mark');
 const pwLabel = document.querySelector('.input-label-password')
 const pwVisible = document.querySelector('.pw-visibility');
+const pwMessage = document.querySelector('.password-error-message');
 const pwEye = document.querySelector('.eye');
 let toggle = false;
 
@@ -48,24 +53,29 @@ function password() {
       pwIcon.classList.remove('hidden');
       pwIcon.src = "./images/valid-icon.svg";
       pwEye.classList.remove('hidden');
+      pwMessage.classList.add('hidden');
     } else if(pwField.checkValidity() !== true && pwField.value !== "") {
       pwIcon.classList.remove('hidden');
       pwEye.classList.remove('hidden');
-    } 
-    else if(pwField.value === "") {
+      pwMessage.classList.remove('hidden');
+    } else if(pwField.value === "") {
       pwIcon.classList.add('hidden');
       pwEye.classList.add('hidden');
-    } 
-    else {
+      pwMessage.classList.add('hidden');
+    } else {
       pwIcon.classList.remove('hidden');
       pwIcon.src = "./images/invalid-icon.svg";
+      pwMessage.classList.remove('hidden');
     }
+    
+    
   })
   
   pwField.addEventListener('blur', function(e) {
     if(pwField.value === "") {
       pwIcon.classList.add('hidden');
       pwEye.classList.add('hidden');
+      pwMessage.classList.add('hidden');
       pwLabel.classList.remove('--is-active');
     } else {
       pwIcon.classList.remove('hidden');

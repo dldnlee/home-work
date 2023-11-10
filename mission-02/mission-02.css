@@ -129,6 +129,12 @@ body {
     left: 1%;
   }
 
+  & .email-error-message, .password-error-message {
+    position: absolute;
+    left: 0;
+    bottom: -1.6rem;
+  }
+
   & input:focus {
     border-bottom: .1rem solid rgb(255, 255, 255);
     border: 1px solid blue;
@@ -166,6 +172,13 @@ body {
       font-weight: 600;
       font-size: 2rem;
       line-height: 29.6px;
+      position: relative;
+    }
+
+    & button img {
+      position: absolute;
+      right: 15px;
+      top: 14px;
     }
 
     & button:hover {
@@ -178,6 +191,8 @@ body {
       background: white;
       color: #24388D;
       border: none;
+      position: relative;
+
     }
   }
 

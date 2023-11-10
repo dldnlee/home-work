@@ -26,17 +26,19 @@
           <span class="email-error">
             <img class="email-validator-mark hidden" src="images/valid-icon.svg" alt="">
           </span>
+          <span class="email-error-message hidden">이메일 입력 방법이 잘못되었습니다. &#40;예: user@domain.io&#41;</span>
         
         </div>
         <div class="password">
           <label for="login-password" class="input-label-password">비밀번호</label>
-          <input type="password" id="login-password" class="pw-input input-field" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+          <input type="password" id="login-password" class="pw-input input-field" pattern="(?=.*\d)(?=.*[a-z]).{6,}">
           <span class="password-error">
             <a class="pw-visibility">
               <img class="eye hidden" src="images/show-pw.svg" alt="hidden">
             </a>
             <img class="pw-validator-mark hidden" src="images/invalid-icon.svg" alt="">
           </span>
+          <span class="password-error-message hidden">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</span>
         </div>
 
         <div class="save-email-container">
@@ -45,8 +47,12 @@
         </div>
 
         <div class="login-form-buttons">
-          <button class="login-button">로그인</button>
-          <button class="register-button">회원가입</button>
+          <button class="login-button">로그인
+            <img src="images/arrow-icon-blue.svg" alt="">
+          </button>
+          <button class="register-button">회원가입
+            <img src="images/arrow-icon-white.svg" alt="">
+          </button>
         </div>
       </form>
     </div>
