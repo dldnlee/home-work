@@ -103,7 +103,8 @@ body {
 
   & .password {
     position: relative;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 10px;
 
     & .password-error {
       position: absolute;
@@ -112,11 +113,7 @@ body {
       padding: 8px;
 
       & .pw-visibility {
-        background: none;
-        border: none;
-        height: 16px;
-        width: 16px;
-        
+        margin-right: 5px;
       }
     }
   } 
@@ -164,7 +161,7 @@ body {
     margin-top: 8rem;
 
     & button {
-      background: none;
+      background: url(./images/arrow-icon-white.svg) center right 20px no-repeat;
       height: 48px;
       border: 1px solid white;
       border-radius: 10px;
@@ -175,20 +172,16 @@ body {
       position: relative;
     }
 
-    & button img {
-      position: absolute;
-      right: 15px;
-      top: 14px;
-    }
-
     & button:hover {
-      background: #24388D;
+      background: url(./images/arrow-icon-white.svg) center right 20px no-repeat;
+      background-color: #24388D;
       color: white;
       border: none;
     }
 
     & .login-button {
-      background: white;
+      background: url(./images/arrow-icon-blue.svg) center right 20px no-repeat;
+      background-color: white;
       color: #24388D;
       border: none;
       position: relative;
