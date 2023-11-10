@@ -1,9 +1,23 @@
+
+// 이메일 DOM Elements
 const emailField = document.getElementById("login-email");
 const emailIcon = document.querySelector('.email-validator-mark');
 const emailLabel = document.querySelector('.input-label-email')
 const emailMessage = document.querySelector('.email-error-message');
 
 
+// 비밀번호 DOM Elements
+const pwField = document.getElementById("login-password");
+const pwIcon = document.querySelector('.pw-validator-mark');
+const pwLabel = document.querySelector('.input-label-password')
+const pwVisible = document.querySelector('.pw-visibility');
+const pwMessage = document.querySelector('.password-error-message');
+const pwEye = document.querySelector('.eye');
+let toggle = false;
+
+
+
+// 이메일 인풋 유동적 스타일 및 경고 메시지 표시 함수
 function email() {
   emailField.addEventListener('keyup', function(e) {
     if(emailField.checkValidity() === true) {
@@ -35,18 +49,9 @@ function email() {
   })
 }
 
-email();
 
-// password field DOM elements
 
-const pwField = document.getElementById("login-password");
-const pwIcon = document.querySelector('.pw-validator-mark');
-const pwLabel = document.querySelector('.input-label-password')
-const pwVisible = document.querySelector('.pw-visibility');
-const pwMessage = document.querySelector('.password-error-message');
-const pwEye = document.querySelector('.eye');
-let toggle = false;
-
+// 비밀번호 인풋 유동적 스타일 및 경고 메시지 표시 함수
 function password() {
   pwField.addEventListener('keyup', function(e) {
     if(pwField.checkValidity() === true && pwField.value !== "") {
@@ -67,8 +72,6 @@ function password() {
       pwIcon.src = "./images/invalid-icon.svg";
       pwMessage.classList.remove('hidden');
     }
-    
-    
   })
   
   pwField.addEventListener('blur', function(e) {
@@ -101,36 +104,6 @@ function password() {
   })
 }
 
+
+email();
 password();
-
-
-
-
-
-
-
-
-// const pwVisibility = document.querySelector('.pw-visibility')
-
-// function togglePassword() {
-//   pwField.addEventListener('focus', function(e) {
-//     if(input.value === "") {
-//       pwVisibility.classList.add('hidden');
-//     } else {
-//       pwVisibility.classList.remove('hidden');
-//     }
-//   })
-
-
-//   pwField.addEventListener('blur', function(e) {
-//     if(input.value === "") {
-//       pwVisibility.classList.add('hidden');
-//     } else {
-//       pwVisibility.classList.remove('hidden');
-//     }
-//   })
-// }
-
-
-
-// togglePassword();
