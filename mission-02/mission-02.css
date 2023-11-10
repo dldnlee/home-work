@@ -4,12 +4,23 @@
 
 html {
   font-size: 10px;
-  }
+}
+
+.hidden {
+  display: none;
+}
+
+.--is-active {
+  animation: input-filled 1s forwards;
+}
 
 /*-------------------*/
 
-@keyframes input-animation {
-
+@keyframes input-filled {
+  100% {
+    transform: translateY(-40px);
+    font-size: 1.2rem;
+  }
 }
 
 
@@ -109,17 +120,42 @@ nav {
   }
 
   & .password {
-    /* position: relative; */
+    position: relative;
     margin-top: 30px;
-  }
 
-  /* & .input-label {
+    & .password-error {
+      position: absolute;
+      right: 0px;
+      bottom: 0;
+      padding: 8px;
+
+      & .pw-visibility {
+        background: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        
+      }
+
+      & .eye {
+        background: url('./images/show-pw.svg');
+      }
+
+      & .eye-slash {
+        background: url('./images/hide-pw.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  } 
+
+  & .input-label-email, .input-label-password {
     position: absolute;
     font-size: 1.6rem;
     font-weight: 300;
     bottom: 25%;
     left: 1%;
-  } */
+  }
 
   & input:focus {
     border-bottom: .1rem solid rgb(255, 255, 255);

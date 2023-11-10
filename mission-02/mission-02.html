@@ -21,18 +21,24 @@
     <div class="login-form-container">
       <form action="/" class="login-form">
         <div class="email">
-          <label for="login-email" class="input-label">이메일</label>
+          <label for="login-email" class="input-label-email">이메일</label>
           <input type="email" id="login-email" class="email-input input-field" required>
-          <span class="email-error" id="email-error">
-            <img src="images/valid-icon.svg" alt="">
+          <span class="email-error">
+            <img class="email-validator-mark hidden" src="images/valid-icon.svg" alt="">
           </span>
-          <img src="" alt="" hidden>
+        
         </div>
         <div class="password">
-          <label for="login-password" class="input-label">비밀번호</label>
-          <input type="password" id="login-password" class="pw-input input-field">
-          <span class="error-message"></span>
+          <label for="login-password" class="input-label-password">비밀번호</label>
+          <input type="password" id="login-password" class="pw-input input-field" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+          <span class="password-error">
+            <a class="pw-visibility .eye-slash">
+              <!-- <img class="eye" src="images/hide-pw.svg" alt="hidden"> -->
+            </a>
+            <img class="pw-validator-mark hidden" src="images/invalid-icon.svg" alt="">
+          </span>
         </div>
+
         <div class="save-email-container">
           <input type="checkbox" value="이메리 저장" id="save-email">
           <label for="save-email">이메일 저장</label>
