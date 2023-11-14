@@ -1,0 +1,42 @@
+
+
+
+
+@media (min-width: 768px) {
+  .navigation-container {
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  
+  padding: 4rem 0;
+
+  & .navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(740px, 96.35%, 1280px);
+
+    & .login {
+      text-decoration: none;
+      color: white;
+      padding: 1.2rem 2rem;
+      background: var(--main-color-1);
+      border-radius: .4rem;
+      font-size: 1.2rem;
+      margin-left: 1rem;
+    }
+
+    & select {
+      background: none;
+      border: 1px solid gray;
+      color: gray;
+      padding: 1.2rem 2rem;
+    }
+  }
+}
+}
+
+@media (max-width: 768px) {
+  
+}

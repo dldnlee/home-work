@@ -1,0 +1,23 @@
+@import './components/navigation/navigation.css';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  background: 
+              url('./images/netflix-cover-page.png') no-repeat 0 0 / cover, black;
+}
+
+:root {
+  --main-color-1: #E50914;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
