@@ -1,21 +1,43 @@
 @import './components/navigation/navigation.css';
+@import './components/main/main.css';
+@import './components/footer/footer.css';
+
+:root {
+  --main-color-1: #E50914;
+  --footer-font-color: #C8C8C8;
+}
 
 html {
   font-size: 10px;
 }
 
+h1, h2, h3 {
+  margin: 0;
+}
+
 body {
   margin: 0;
+}
+
+.lang-option {
+  background: none;
+  border: 1px solid gray;
+  color: gray;
+  padding: 1.2rem 2rem;
+  width: 110px;
+
+}
+
+.content-container {
+  height: 100vh;
+  width: 100vw;
   background-color: black;
-  height: 100%;
-  width: 100%;
-  background: 
+  background: rgb(0,0,0);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%) no-repeat 0 0 fixed,
               url('./images/netflix-cover-page.png') no-repeat 0 0 / cover, black;
 }
 
-:root {
-  --main-color-1: #E50914;
-}
+
 
 a {
   text-decoration: none;
