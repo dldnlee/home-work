@@ -9,6 +9,16 @@
   --main-color-2: #a50d15;
   --footer-font-color: #C8C8C8;
 }
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0,0,0,0);
+}
 html {
   font-size: 10px;
 }

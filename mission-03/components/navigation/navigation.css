@@ -52,6 +52,7 @@
 
     & .login {
       padding: .5rem 1.2rem;
+      font-size: 1.2rem;
     }
   }
 }
