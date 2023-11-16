@@ -2,44 +2,71 @@
 @import './components/main/main.css';
 @import './components/footer/footer.css';
 
+/* Format */
+
 :root {
   --main-color-1: #E50914;
+  --main-color-2: #a50d15;
   --footer-font-color: #C8C8C8;
 }
-
 html {
   font-size: 10px;
 }
-
-h1, h2, h3 {
+h1, h2, h3 {  
   margin: 0;
 }
-
 body {
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Creating Components */
 
 .lang-option {
+  appearance: none;
+  -webkit-appearance: none;
   background: none;
+  background: url(./images/globe.svg) no-repeat 10px, url(./images/language-down.svg) no-repeat 85px;
   border: 1px solid gray;
   color: gray;
   padding: 1.2rem 2rem;
   width: 110px;
-
+  text-align: center;
+  font-size: 1.6rem;
+  
+  & option {
+    padding: none;
+  }
 }
+
+.lang-option:hover {
+  border: 1px solid white;
+}
+
+.content-divider {
+  margin: 0;
+  border: 1px solid rgb(63, 63, 63);
+}
+
+/* Content Container for Netflix Background */
 
 .content-container {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: black;
   background: rgb(0,0,0);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%) no-repeat 0 0 fixed,
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,.4) 50%, rgba(0,0,0,.8) 75%, rgba(0,0,0,1) 100%) no-repeat 0 0 scroll,
               url('./images/netflix-cover-page.png') no-repeat 0 0 / cover, black;
 }
 
 
-
-a {
-  text-decoration: none;
-  color: white;
+@media (max-width: 768px) {
+  .content-container {
+    background: rgb(0,0,0);
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,1) 100%) no-repeat 0 0 scroll,
+                url('./images/netflix-cover-page.png') no-repeat 0 0 / cover, black;
+  }
 }

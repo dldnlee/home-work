@@ -1,22 +1,109 @@
+.main-inner-container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  row-gap: 2.8rem;
+  color: white;
+}
+
+form {
+  display: flex;
+  width: 100%;
+}
+
+input {
+  padding: 1.8rem 2rem;
+  font-size: 1.7rem;
+  width: 75%;
+  border: none;
+}
+
+button {
+  display: flex;
+  color: white;
+  width: 25%;
+  padding: 1rem 1.7rem;
+  border: none;
+  background: var(--main-color-1);
+  font-size: 1.7rem;
+  font-weight: 700;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:hover {
+  background: var(--main-color-2);
+}
+
+@media (max-width: 768px) {
+  .main-inner-container {
+    row-gap: 2.4rem;
+  }
+
+
+  .main-container {
+    padding: 8rem 30px;
+    /* background: black; */
+    height: 100%;
+
+    & .main-inner-container {
+      max-width: 300px;
+      & h1 {
+        font-size: 3rem;
+        max-width: 300px;
+      }
+
+      & h2 {
+        font-size: 1.5rem;
+        max-width: 230px;
+      }
+
+      & h3 {
+        font-size: 1.1rem;
+        max-width: 240px; 
+        font-weight: 400;
+      }
+
+      & form {
+        flex-flow: column;
+        align-items: center;
+        row-gap: 1rem;
+      }
+
+      & input {
+        width: 200px;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+        border-radius: 20px;
+      }
+
+      & button {
+        width: 140px;
+        font-size: 1.1rem;
+        padding: 1rem 1.8rem;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .main-container {
-    padding: 57px 3%;
+    padding: 80px 3%;
   }
 
   .main-inner-container {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    row-gap: 2.8rem;
     width: clamp(100px, 100%, 750px);
     color: white;
 
     & h1 {
-      width: 600px;
+      line-height: 120%; 
+      max-width: 600px;
       font-size: 6rem;
     }
     & h2 {
@@ -30,31 +117,6 @@
     & span {
       font-size: 1.6rem;
       font-weight: 700;
-    }
-
-    & form {
-      display: flex;
-      width: 100%;
-
-      & input {
-        padding: 1.8rem 2rem;
-        font-size: 1.7rem;
-        width: 75%;
-        border: none;
-      }
-
-      & button {
-        display: flex;
-        color: white;
-        width: 25%;
-        padding: 1rem 1.7rem;
-        border: none;
-        background: var(--main-color-1);
-        font-size: 1.7rem;
-        font-weight: 700;
-        justify-content: space-between;
-        align-items: center;
-      }
     }
   }
 }
