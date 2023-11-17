@@ -1,6 +1,22 @@
+/* Classes */
+.--is-active {
+  animation: input-filled .5s forwards;
+  font-weight: 700;
+}
+
+/* Animations */
+@keyframes input-filled {
+  100% {
+    transform: translateY(-1rem);
+    font-size: 1rem;
+    color: var(--main-color-1);
+  }
+}
+
+
 .main-inner-container {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -10,19 +26,43 @@
   color: white;
 }
 
-form {
+.email-form {
   display: flex;
   width: 100%;
+  position: relative;
+  
+  & .email-label {
+    position: absolute;
+    left: 2rem;
+    top: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--gray-500);
+  }
+  & .email-input {
+    padding: 2rem 2rem 1.6rem 2rem;
+    font-size: 1.7rem;
+    width: 75%;
+    border: 1px solid transparent;
+  }
+  & .email-input:focus {
+    outline: none;
+    border-bottom: 1px solid red;
+    box-sizing: content-box;
+  }
+  & .email-invalid-text {
+    position: absolute;
+    left: 2rem;
+    bottom: -2rem;
+    font-size: 1.2rem;
+    color: var(--main-color-1);
+  }
 }
 
-input {
-  padding: 1.8rem 2rem;
-  font-size: 1.7rem;
-  width: 75%;
-  border: none;
-}
 
-button {
+
+
+
+.email-button {
   display: flex;
   color: white;
   width: 25%;
@@ -40,6 +80,14 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  @keyframes input-filled {
+    100% {
+      transform: translateY(-2.5rem);
+      font-size: 1rem;
+      color: var(--main-color-1);
+    }
+  }
+
   .main-inner-container {
     row-gap: 2.4rem;
   }
@@ -68,21 +116,37 @@ button:hover {
         font-weight: 400;
       }
 
-      & form {
+      
+      & .email-form {
         flex-flow: column;
         align-items: center;
         row-gap: 1rem;
+
+
+        & .email-input {
+          padding: 1rem 2rem;
+          font-size: 1.5rem;
+          box-sizing: border-box;
+          border-radius: 20px;
+        }
+
+        & .email-label {
+          left: 5rem;
+          top: .8rem;
+        }
+        & .email-input:focus {
+          border: 1px solid red;
+        }
+        & .email-invalid-text {
+          position: static;
+          font-size: 1rem;
+          color: var(--main-color-1);
+        }
+
+        
       }
 
-      & input {
-        width: 200px;
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
-        box-sizing: border-box;
-        border-radius: 20px;
-      }
-
-      & button {
+      & .email-button {
         width: 140px;
         font-size: 1.1rem;
         padding: 1rem 1.8rem;

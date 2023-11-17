@@ -1,4 +1,4 @@
-@import './components/navigation/navigation.css';
+@import './components/header/header.css';
 @import './components/main/main.css';
 @import './components/footer/footer.css';
 
@@ -6,9 +6,16 @@
 
 :root {
   --main-color-1: #E50914;
-  --main-color-2: #a50d15;
+  --main-color-2: #B70710;
   --footer-font-color: #C8C8C8;
+  --gray-200: #C8C8C8;
+  --gray-300: #ACACAC;
+  --gray-400: #919191;
+  --gray-500: #757575;
+
 }
+
+/* Classes */
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -19,6 +26,11 @@
   border: 0;
   clip: rect(0,0,0,0);
 }
+.hidden {
+  display: none;
+}
+
+/* Resets */
 html {
   font-size: 10px;
 }
@@ -32,6 +44,7 @@ a {
   text-decoration: none;
   color: white;
 }
+
 
 /* Creating Components */
 

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>넷플릭스</title>
   <link rel="stylesheet" href="mission-03.css">
+  <script src="mission-03.js" defer></script>
 </head>
 <body>
   <div class="content-container">
@@ -24,11 +25,13 @@
     <main class="main-container">
       <div class="main-inner-container">
         <h1>영화, TV 프로그램을 무제한으로.</h1>
-        <h2>다양한 디바이스에서 시청하세요. 언제든 해지할 수 있습니다.</h2>
+        <h2>다양한 디바이스에서 시청하세요, 언제든 해지할 수 있습니다.</h2>
         <h3>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</h3>
-        <form action="/">
-          <input type="email" placeholder="이메일 주소">
-          <button>30일 무료 이용
+        <form action="/" class="email-form">
+          <label class="email-label" for="email">이메일 주소</label>
+          <input type="email" class="email-input" id="email" required>
+          <span class="email-invalid-text hidden">정확한 이메일 주소를 입력하세요.</span>
+          <button class="email-button">30일 무료 이용
             <img src="../../images/arrow.png" alt="">
           </button>
         </form>

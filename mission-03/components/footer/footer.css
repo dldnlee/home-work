@@ -11,14 +11,19 @@
   flex-flow: column;
   row-gap: 3rem;
   font-size: 1.2rem;
-  color: var(--footer-font-color);
+
+  & h1 {
+    color: var(--gray-300)
+  }
 
   & h2 {
-    color: white;
+    color: var(--gray-200);
+  }
+
+  & p {
+    color: var(--gray-400);
   }
   .footer-nav {
-    color: var(--footer-font-color);
-  
     & ul {
       display: flex;
       flex-flow: column nowrap;
@@ -26,6 +31,10 @@
       list-style: none;
       padding: 0;
       margin: 0;
+
+      & a {
+        color: var(--gray-300);
+      }
     }
   }
 }
