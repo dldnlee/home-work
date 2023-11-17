@@ -22,7 +22,11 @@
 네비게이션과 메인 컨텐트를 감싸주는 `content-container`을 만든 이유는 샘플에서 나오는 것과 같이, 배경이 footer영역까지는 채우지 않기 위해 `div`로 감쌌습니다.
 
 # 3. CSS
+<img width="95" alt="Screen Shot 2023-11-17 at 8 07 14 PM" src="https://github.com/dldnlee/home-work/assets/83799987/4c5f00fb-c364-4f8f-9322-61bfd5e3d59e">
+<br>
 CSS으로 작업을 하면서, 공통된 요소들은 :root: 속성 안에서 선언을 하고 사용했으며 `mission-03.css` 안에서 @import을 사용해서 모든 컴포넌트의 css파일을 한 파일에 통합 시켰습니다.
 CSS부분에서 새롭게 사용해봤던 요소는 `select` 태그를 스타일링 하는 것였습니다. 이 부분에 필요한 이미지/로고들을 삽입하기 위해서는 img파일을 html에 마크업 하는 것 보다, 언어를 바꿨을 때
 반복되는 코드가 없기위해 백그라운드 이미지를 지정했습니다.
+
+
 
