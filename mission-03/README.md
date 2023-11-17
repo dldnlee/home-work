@@ -28,7 +28,49 @@ CSS으로 작업을 하면서, 공통된 요소들은 :root: 속성 안에서 �
 CSS부분에서 새롭게 사용해봤던 요소는 `select` 태그를 스타일링 하는 것였습니다. 이 부분에 필요한 이미지/로고들을 삽입하기 위해서는 img파일을 html에 마크업 하는 것 보다, 언어를 바꿨을 때
 반복되는 코드가 없기위해 백그라운드 이미지를 지정했습니다.
 
+# 4. JavaScript
+
+자바스크립트 코드는 mission-02에서 사용한 코드를 재사용 했습니다. 인풋 영역이 `focus`됐을 경울 placeholder가 올라가고, 만약 그 안에 텍스트가 있다면 그대로 위치를 유지하고, 이메일 형식이 맞지 않을 경우에 에러 메세지가 뜨도록 구현 했습니다. 
+
+```
+// 이메일 DOM Elements
+const emailField = document.getElementById("email");
+const emailLabel = document.querySelector('.email-label')
+const emailMessage = document.querySelector('.email-invalid-text');
+
+
+
+// 이메일 인풋 유동적 스타일 및 경고 메시지 표시 함수
+function email() {
+  emailField.addEventListener('keyup', function(e) {
+    if(emailField.checkValidity() === true) {
+      emailMessage.classList.add('hidden')
+    } else if (emailField.value === "") {
+      emailMessage.classList.add('hidden')
+    } 
+    else {
+      emailMessage.classList.remove('hidden');
+    }
+  })
+  
+  emailField.addEventListener('blur', function(e) {
+    if(emailField.value === "") {
+      emailLabel.classList.remove('--is-active');
+    } else {
+    }
+  })
+
+  emailField.addEventListener('focus', function(e) {
+    emailLabel.classList.add('--is-active');
+  })
+}
+
+email();
+```
+
 # 4. 결과
+영상 링크: https://youtu.be/kUKAdDnqmdQ
+<br>
 <img width="1273" alt="image" src="https://github.com/dldnlee/home-work/assets/83799987/93eefdb0-8f4d-4a68-9835-5cfd248374c4">
 <br>
 
