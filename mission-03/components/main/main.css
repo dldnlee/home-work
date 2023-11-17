@@ -132,7 +132,7 @@ button:hover {
 
         & .email-label {
           left: 5rem;
-          top: .8rem;
+          top: .5rem;
         }
         & .email-input:focus {
           border: 1px solid red;

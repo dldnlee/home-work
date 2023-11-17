@@ -1,6 +1,8 @@
 @import './components/header/header.css';
 @import './components/main/main.css';
 @import './components/footer/footer.css';
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+.spoka * { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
 
 /* Format */
 
@@ -33,6 +35,7 @@
 /* Resets */
 html {
   font-size: 10px;
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
 }
 h1, h2, h3 {  
   margin: 0;
