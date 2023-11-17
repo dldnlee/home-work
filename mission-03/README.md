@@ -28,5 +28,8 @@ CSS으로 작업을 하면서, 공통된 요소들은 :root: 속성 안에서 �
 CSS부분에서 새롭게 사용해봤던 요소는 `select` 태그를 스타일링 하는 것였습니다. 이 부분에 필요한 이미지/로고들을 삽입하기 위해서는 img파일을 html에 마크업 하는 것 보다, 언어를 바꿨을 때
 반복되는 코드가 없기위해 백그라운드 이미지를 지정했습니다.
 
+# 4. 결과
+<img width="1273" alt="image" src="https://github.com/dldnlee/home-work/assets/83799987/93eefdb0-8f4d-4a68-9835-5cfd248374c4">
+<br>
 
 
